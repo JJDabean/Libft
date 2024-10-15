@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djoung <djoung@student.42gyeongsan.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/13 02:57:31 by djoung            #+#    #+#             */
-/*   Updated: 2024/10/15 22:00:53 by djoung           ###   ########.fr       */
+/*   Created: 2024/10/15 21:44:55 by djoung            #+#    #+#             */
+/*   Updated: 2024/10/15 21:48:34 by djoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	if (n == -2147483648)
-	{
-		write(fd, "-2147483648", 11);
+	t_list	*tmp;
+
+	tmp = *lst;
+	if (!(*lst))
 		return ;
-	}
-	else if (n < 0)
+	while (*lst)
 	{
-		ft_putchar_fd('-', fd);
-		ft_putnbr_fd(-n, fd);
+		*lst = tmp->next;
+		del(tmp->content);
+		free(tmp);
+		tmp = *lst;
 	}
-	else if (n > 9)
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10, fd);
-	}
-	else
-		ft_putchar_fd(n + '0', fd);
 }

@@ -6,7 +6,7 @@
 /*   By: djoung <djoung@student.42gyeongsan.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 02:53:41 by djoung            #+#    #+#             */
-/*   Updated: 2024/10/13 23:44:27 by djoung           ###   ########.fr       */
+/*   Updated: 2024/10/15 22:05:41 by djoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		str[i] = f(i, s[i]);
 		i++;
 	}
+	str[i] = '\0';
 	return (str);
 }
