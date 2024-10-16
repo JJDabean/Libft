@@ -6,7 +6,7 @@
 /*   By: djoung <djoung@student.42gyeongsan.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/05 19:56:53 by djoung            #+#    #+#             */
-/*   Updated: 2024/10/13 00:35:42 by djoung           ###   ########.fr       */
+/*   Updated: 2024/10/16 21:57:08 by djoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	l_len = ft_strlen(little);
 	b_len = ft_strlen(big);
 	if (b_len < l_len || len < l_len)
-		return ('\0');
+		return (NULL);
 	if (b_len > len)
 		size = len;
 	else
@@ -34,5 +34,5 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 			return ((char *)big);
 		big++;
 	}
-	return (0);
+	return (NULL);
 }

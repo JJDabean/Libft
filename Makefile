@@ -13,7 +13,7 @@
 SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c ft_isascii.c \
 					ft_strlcat.c ft_strncmp.c ft_isalpha.c \
 					ft_memcpy.c  ft_strchr.c  ft_strlcpy.c \
-					ft_tolower.c ft_bzero.c   ft_isascii.c \
+					ft_tolower.c ft_bzero.c   \
 					ft_memmove.c ft_strdup.c  ft_strlen.c \
 					ft_isdigit.c ft_memchr.c  ft_memset.c \
 					ft_atoi.c ft_calloc.c ft_toupper.c \
@@ -41,11 +41,10 @@ $(NAME):		$(OBJS)
 				ar rcs $(NAME) $(OBJS)
 
 bonus:			$(BONUS_OBJS)
-				ar rcs $(NAME) $^
-				@touch $@
+				ar rcs $(NAME) $(BONUS_OBJS)
 
 clean:
-				$(RM) $(OBJS) $(BONUS_OBJS) bonus
+				$(RM) $(OBJS) $(BONUS_OBJS)
 
 fclean:			clean
 				$(RM) $(NAME)
@@ -53,3 +52,4 @@ fclean:			clean
 re:				fclean $(NAME)
 
 .PHONY:			all clean fclean re
+
