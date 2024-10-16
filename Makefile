@@ -6,7 +6,7 @@
 #    By: djoung <djoung@student.42gyeongsan.kr      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/11 16:57:36 by djoung            #+#    #+#              #
-#    Updated: 2024/10/15 22:03:37 by djoung           ###   ########.fr        #
+#    Updated: 2024/10/16 17:47:35 by djoung           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,8 +23,7 @@ SRCS			=	ft_isalnum.c ft_isprint.c ft_memcmp.c ft_isascii.c \
 
 BONUS_SRCS		=	ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c \
 					ft_lstlast_bonus.c ft_lstadd_back_bonus.c ft_lstdelone_bonus.c \
-					ft_lstclear_bonus.c ft_lstiter_bonus.c 
-# 					ft_lstmap_bonus.c
+					ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
 OBJS			= $(SRCS:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: djoung <djoung@student.42gyeongsan.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 02:53:41 by djoung            #+#    #+#             */
-/*   Updated: 2024/10/15 22:05:41 by djoung           ###   ########.fr       */
+/*   Updated: 2024/10/16 17:58:47 by djoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char		*str;
-	unsigned int		i;
-	int			str_len;
+	char			*str;
+	unsigned int	i;
+	int				str_len;
 
 	if (!s || !f)
 		return (NULL);

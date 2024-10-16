@@ -6,7 +6,7 @@
 /*   By: djoung <djoung@student.42gyeongsan.kr      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/13 02:57:31 by djoung            #+#    #+#             */
-/*   Updated: 2024/10/15 22:00:53 by djoung           ###   ########.fr       */
+/*   Updated: 2024/10/16 17:39:08 by djoung           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	ft_putnbr_fd(int n, int fd)
 	else if (n > 9)
 	{
 		ft_putnbr_fd(n / 10, fd);
-		ft_putchar_fd(n % 10, fd);
+		ft_putnbr_fd(n % 10, fd);
 	}
 	else
 		ft_putchar_fd(n + '0', fd);
